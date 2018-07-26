@@ -19,23 +19,13 @@
     )}}
   {{/if}}
 {{else}}
-  {{#if _truncate}}
-    {{#ember-truncate/truncation-target}}
-    {{text}}
-    {{/ember-truncate/truncation-target}}
-    {{! only show the "see more" button if the text has been truncated }}
-    {{#if isTruncated}}
-      {{#ember-truncate/button-toggle _destination=_buttonDestination _inPlace=_buttonInPlace onClick=(action "toggleTruncate")}}
-        see more
-      {{/ember-truncate/button-toggle}}
+  <div onclick={{action "toggleTruncate"}}>
+    {{#if _truncate}}
+      {{#ember-truncate/truncation-target}}
+      {{text}}
+      {{/ember-truncate/truncation-target}}
+    {{else}}
+      {{text}}
     {{/if}}
-  {{else}}
-    {{text}}
-    {{! only show the "see less" button if the text has been truncated }}
-    {{#if isTruncated}}
-      {{#ember-truncate/button-toggle _inPlace=true onClick=(action "toggleTruncate")}}
-        see less
-      {{/ember-truncate/button-toggle}}
-    {{/if}}
-  {{/if}}
+  </div>
 {{/if}}
