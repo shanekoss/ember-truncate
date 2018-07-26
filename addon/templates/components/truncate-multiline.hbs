@@ -19,7 +19,7 @@
     )}}
   {{/if}}
 {{else}}
-  <div onclick={{action "toggleTruncate"}}>
+  <div onclick={{action (optional (if clickable (action "toggleTruncate") null))}}>
     {{#if _truncate}}
       {{#ember-truncate/truncation-target}}
       {{text}}

@@ -1,7 +1,8 @@
 {
-  "name": "ember-truncate",
-  "version": "0.3.2",
-  "description": "A generic component used to truncate text to a specified number of lines.",
+  "name": "ember-truncate-4elements",
+  "version": "0.3.3",
+  "description":
+    "A generic component used to truncate text to a specified number of lines.",
   "keywords": [
     "ember-addon",
     "components",
@@ -21,7 +22,8 @@
     "build": "ember build",
     "start": "ember server",
     "test": "npm run verify:supported",
-    "verify:supported": "ember try:each --config-path=config/scenarios-supported.js",
+    "verify:supported":
+      "ember try:each --config-path=config/scenarios-supported.js",
     "verify:latest": "ember try:each --config-path=config/scenarios-latest.js"
   },
   "dependencies": {
